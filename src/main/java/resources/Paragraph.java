@@ -6,9 +6,10 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Paragraphs {
+public class Paragraph implements IElement {
     private String Text;
 
+    @Override
     public void print() {
         System.out.println("[Paragraph] text: " + Text);
     }

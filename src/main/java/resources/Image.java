@@ -6,9 +6,10 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Image {
+public class Image implements IElement {
     private String ImageName;
 
+    @Override
     public void print() {
         System.out.println("[Image] ImageName: " + ImageName);
     }

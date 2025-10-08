@@ -12,17 +12,15 @@ public class SpLab2025Application {
         Author author1 = new Author("Robert C. Martin");
         Author author2 = new Author("Martin Fowler");
 
-        Paragraphs p1 = new Paragraphs("Clean code is readable, understandable, and maintainable.");
-        Paragraphs p2 = new Paragraphs("Refactoring helps keep your code clean.");
+        IElement p1 = new Paragraph("Clean code is readable, understandable, and maintainable.");
+        IElement p2 = new Paragraph("Refactoring helps keep your code clean.");
 
-        Image img1 = new Image("clean_code_diagram.png");
-        Table table1 = new Table("SOLID Principles");
+        IElement img1 = new Image("clean_code_diagram.png");
+        IElement table1 = new Table("SOLID Principles");
 
         SubChapter sc1 = new SubChapter(
                 "Writing Clean Code",
-                List.of(img1),
-                List.of(p1, p2),
-                List.of(table1)
+                List.of(img1, p1, p2, table1)
         );
 
         Chapter ch1 = new Chapter("Introduction to Clean Code", List.of(sc1));
