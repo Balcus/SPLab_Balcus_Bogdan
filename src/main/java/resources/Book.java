@@ -1,18 +1,18 @@
 package resources;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Book {
     private String Title;
     private List<Author> Authors;
     private List<Chapter> Chapters;
+    TableOfContents TableOfContents;
 
     public void print() {
         System.out.println("[Book] Title: " + Title);

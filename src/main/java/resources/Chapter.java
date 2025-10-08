@@ -1,11 +1,11 @@
 package resources;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Chapter {
@@ -13,7 +13,8 @@ public class Chapter {
     private List<SubChapter> SubChapters;
 
     public void print() {
-        System.out.println("[Chapter] Name: " + Name + "/nSubChapters: ");
+        System.out.println("[Chapter] Name: " + Name);
+        System.out.println("SubChapters: ");
         for (SubChapter subChapter : SubChapters) {
             subChapter.print();
         }

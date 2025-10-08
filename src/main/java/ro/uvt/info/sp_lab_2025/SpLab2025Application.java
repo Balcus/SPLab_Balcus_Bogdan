@@ -26,11 +26,13 @@ public class SpLab2025Application {
         );
 
         Chapter ch1 = new Chapter("Introduction to Clean Code", List.of(sc1));
+        TableOfContents tableOfContents = new TableOfContents();
 
         Book book = new Book(
                 "Clean Code: A Handbook of Agile Software Craftsmanship",
                 List.of(author1, author2),
-                List.of(ch1)
+                List.of(ch1),
+                tableOfContents
         );
 
         book.print();

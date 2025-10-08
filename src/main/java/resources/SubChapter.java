@@ -1,11 +1,11 @@
 package resources;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
 import java.util.List;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class SubChapter {
@@ -20,7 +20,7 @@ public class SubChapter {
         if (Images != null && !Images.isEmpty()) {
             System.out.println("  Images:");
             for (Image img : Images) {
-                System.out.println("    - " + img);
+                img.print();
             }
         } else {
             System.out.println("  No images");
@@ -39,7 +39,7 @@ public class SubChapter {
         if (Tables != null && !Tables.isEmpty()) {
             System.out.println("  Tables:");
             for (Table t : Tables) {
-                System.out.println("    - " + t);
+                t.print();
             }
         } else {
             System.out.println("  No tables");
