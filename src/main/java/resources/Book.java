@@ -2,6 +2,7 @@ package resources;
 
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -9,30 +10,43 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Book {
-    private String Title;
-    private List<Author> Authors;
-    private List<Chapter> Chapters;
-    TableOfContents TableOfContents;
+    private String title;
+    private List<Author> authors;
+    private List<Element> elements;
+
+    public Book(String t) {
+        this.title = t;
+        this.authors = new ArrayList<>();
+        this.elements = new ArrayList<>();
+    }
 
     public void print() {
-        System.out.println("[Book] Title: " + Title);
+        System.out.println("[Book] Title: " + title);
 
-        if (Authors != null && !Authors.isEmpty()) {
-            System.out.println("Authors:");
-            for (Author author : Authors) {
-                author.print();
-            }
-        } else {
-            System.out.println("No authors");
+        if (authors.isEmpty()) {
+            return;
+        }
+        for (Author a : authors) {
+            a.print();
         }
 
-        if (Chapters != null && !Chapters.isEmpty()) {
-            System.out.println("Chapters:");
-            for (Chapter chapter : Chapters) {
-                chapter.print();
-            }
-        } else {
-            System.out.println("No chapters");
+        if (elements.isEmpty()) {
+            return;
         }
+        for (Element e : elements) {
+            e.print();
+        }
+    }
+
+    public void addAuthor(Author auth) {
+        this.authors.add(auth);
+    }
+
+    public void addContent(Element element) throws Exception {
+        if (element.parent != null) {
+            throw new Exception("It is not allowed for an element to have multiple parents");
+        }
+        this.elements.add(element);
+        element.setParent(this);
     }
 }

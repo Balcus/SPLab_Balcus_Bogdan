@@ -7,33 +7,36 @@ import java.util.List;
 
 @SpringBootApplication
 public class SpLab2025Application {
+    public static void main(String[] args) throws Exception {
+        Book noapteBuna = new Book("Noapte buna, copii!");
+        Author rpGheo = new Author("Radu Pavel Gheo");
+        noapteBuna.addAuthor(rpGheo);
 
-    public static void main(String[] args) {
-        Author author1 = new Author("Robert C. Martin");
-        Author author2 = new Author("Martin Fowler");
+        Section cap1 = new Section("Capitolul 1");
+        Section cap11 = new Section("Capitolul 1.1");
+        Section cap111 = new Section("Capitolul 1.1.1");
+        Section cap1111 = new Section("Subchapter 1.1.1.1");
 
-        IElement p1 = new Paragraph("Clean code is readable, understandable, and maintainable.");
-        IElement p2 = new Paragraph("Refactoring helps keep your code clean.");
+        noapteBuna.addContent(new Paragraph("Multumesc celor care ..."));
+        noapteBuna.addContent(cap1);
+        cap1.add(new Paragraph("Moto capitol"));
+        cap1.add(cap11);
+        cap11.add(new Paragraph("Text from subchapter 1.1"));
+        cap11.add(cap111);
+        cap111.add(new Paragraph("Text from subchapter 1.1.1"));
+        cap111.add(cap1111);
+        cap1111.add(new Image("Image subchapter 1.1.1.1"));
 
-        IElement img1 = new Image("clean_code_diagram.png");
-        IElement table1 = new Table("SOLID Principles");
+        Section cap2 = new Section("Capitolul 2");
+        noapteBuna.addContent(cap2);
 
-        SubChapter sc1 = new SubChapter(
-                "Writing Clean Code",
-                List.of(img1, p1, p2, table1)
-        );
+        try {
+            cap2.add(cap1111);
+        } catch (Exception e) {
+            System.out.println("Exception : " + e.getMessage());
+        }
 
-        Chapter ch1 = new Chapter("Introduction to Clean Code", List.of(sc1));
-        TableOfContents tableOfContents = new TableOfContents();
-
-        Book book = new Book(
-                "Clean Code: A Handbook of Agile Software Craftsmanship",
-                List.of(author1, author2),
-                List.of(ch1),
-                tableOfContents
-        );
-
-        book.print();
+        noapteBuna.print();
     }
-
 }
+

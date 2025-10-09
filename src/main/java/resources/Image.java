@@ -6,11 +6,26 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Image implements IElement {
-    private String ImageName;
+public class Image extends Element {
+    private String imageName;
 
     @Override
     public void print() {
-        System.out.println("[Image] ImageName: " + ImageName);
+        System.out.println("[Image] ImageName: " + imageName);
+    }
+
+    @Override
+    public void add(Element element) {
+        throw new UnsupportedOperationException("Not supported.");
+    }
+
+    @Override
+    public void removeElement(Element element) {
+        throw new UnsupportedOperationException("Not supported.");
+    }
+
+    @Override
+    public Element getElement(int i) {
+        throw new UnsupportedOperationException("Not supported.");
     }
 }

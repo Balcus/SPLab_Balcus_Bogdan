@@ -6,11 +6,26 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Table implements IElement {
-    private String Title;
+public class Table extends Element {
+    private String title;
 
     @Override
     public void print() {
-        System.out.println("[Table] Title: " + Title);
+        System.out.println("[Table] Title: " + title);
+    }
+
+    @Override
+    public void add(Element element) {
+        throw new UnsupportedOperationException("Not supported.");
+    }
+
+    @Override
+    public void removeElement(Element element) {
+        throw new UnsupportedOperationException("Not supported.");
+    }
+
+    @Override
+    public Element getElement(int i) {
+        throw new UnsupportedOperationException("Not supported.");
     }
 }

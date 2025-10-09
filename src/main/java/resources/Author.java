@@ -7,9 +7,9 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Author {
-    private String Name;
+    private String name;
 
     public void print() {
-        System.out.println("[Author] Name: " + this.Name);
+        System.out.println("[Author] Name: " + this.name);
     }
 }
