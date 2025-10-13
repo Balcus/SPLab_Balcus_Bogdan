@@ -8,10 +8,15 @@ import lombok.*;
 @AllArgsConstructor
 public class Paragraph extends Element {
     private String text;
+    private AlignStrategy textAlignment = new AlignLeft();
+
+    public Paragraph(String text) {
+        this.text = text;
+    }
 
     @Override
     public void print() {
-        System.out.println("[Paragraph] text: " + text);
+        textAlignment.render(this);
     }
 
     @Override
