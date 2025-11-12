@@ -1,0 +1,30 @@
+2025-11-12 22:33:20 - Starting SpLab2025Application using Java 21.0.9 with PID 12510 (/mnt/disk-d/SPLab_Balcus_Bogdan/build/classes/java/main started by bogdan in /mnt/disk-d/SPLab_Balcus_Bogdan)
+2025-11-12 22:33:20 - No active profile set, falling back to 1 default profile: "default"
+2025-11-12 22:33:21 - Tomcat initialized with port 8080 (http)
+2025-11-12 22:33:21 - Starting service [Tomcat]
+2025-11-12 22:33:21 - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-12 22:33:21 - Initializing Spring embedded WebApplicationContext
+2025-11-12 22:33:21 - Root WebApplicationContext: initialization completed in 815 ms
+2025-11-12 22:33:21 - Tomcat started on port 8080 (http) with context path '/'
+2025-11-12 22:33:21 - Started SpLab2025Application in 1.671 seconds (process running for 2.119)
+2025-11-12 22:33:28 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-12 22:33:28 - Initializing Servlet 'dispatcherServlet'
+2025-11-12 22:33:28 - Completed initialization in 1 ms
+2025-11-12 22:35:41 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-12 22:35:41 - Graceful shutdown complete
+2025-11-12 22:35:45 - Starting SpLab2025Application using Java 21.0.9 with PID 13049 (/mnt/disk-d/SPLab_Balcus_Bogdan/build/classes/java/main started by bogdan in /mnt/disk-d/SPLab_Balcus_Bogdan)
+2025-11-12 22:35:45 - No active profile set, falling back to 1 default profile: "default"
+2025-11-12 22:35:46 - Tomcat initialized with port 8080 (http)
+2025-11-12 22:35:46 - Starting service [Tomcat]
+2025-11-12 22:35:46 - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-12 22:35:46 - Initializing Spring embedded WebApplicationContext
+2025-11-12 22:35:46 - Root WebApplicationContext: initialization completed in 791 ms
+2025-11-12 22:35:46 - Tomcat started on port 8080 (http) with context path '/'
+2025-11-12 22:35:46 - Started SpLab2025Application in 1.639 seconds (process running for 2.113)
+2025-11-12 22:36:03 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-12 22:36:03 - Initializing Servlet 'dispatcherServlet'
+2025-11-12 22:36:03 - Completed initialization in 1 ms
+2025-11-12 22:36:03 - Request: GET / from 127.0.0.1 at 2025-11-12T22:36:03.442936814
+2025-11-12 22:36:14 - Request: GET / from 127.0.0.1 at 2025-11-12T22:36:14.714612735
+2025-11-12 22:36:24 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-12 22:36:24 - Graceful shutdown complete
